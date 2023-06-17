@@ -1,4 +1,7 @@
 <?php
+// Start session
+session_start();
+
 // Connect to MySQL
 $conn = mysqli_connect("localhost", "root", "", "dynamic");
 
@@ -29,7 +32,7 @@ if (mysqli_num_rows($user_result) == 1) {
   $username = $user_row['username'];
 
   // Retrieve additional user details based on the role
-  $role =$user_row['role'];
+  $role = $_SESSION['role'];
   if ($role == 'student') {
     $student_sql = "SELECT * FROM students WHERE username='$username'";
     $student_result = mysqli_query($conn, $student_sql);
@@ -52,7 +55,13 @@ if (mysqli_num_rows($user_result) == 1) {
       $role = "teacher";
     }
   }
-}
+
+  // Prepare the user profile data as an array
+ echo "name = $name.<br>";
+ echo "username = $username.<br>";
+ echo "bio = $bio.<br>";
+ echo "profession = $role.<br>";
 // Close MySQL connection
 mysqli_close($conn);
+}
 ?>

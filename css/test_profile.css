@@ -10,10 +10,16 @@ body {
 }
 .profile-img {
   text-align: center;
+  width: 70px;
+  height: 100px;
+}
+#profile-picture {
+  width: 70px;
+  height: 100px;
 }
 .profile-img img {
-  width: 70%;
-  height: 100%;
+  width: 70px;
+  height: 100px;
 }
 .profile-img .file {
   position: relative;

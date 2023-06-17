@@ -34,25 +34,27 @@ if (mysqli_num_rows($user_result) == 1) {
     $student_sql = "SELECT * FROM students WHERE username='$username'";
     $student_result = mysqli_query($conn, $student_sql);
     if (mysqli_num_rows($student_result) == 1) {
-      //setting the role
-      $_SESSION['role']="student";
+      // Set session role
+      $_SESSION['role'] = "student";
 
-      // Redirect to show.php for student
-      header("Location: ../profile.php");
+      // Redirect to profile.php for student with message
+      header("Location: ../profile.php?id=" . urlencode($username));
       exit(); // Exit script
     } else {
-      // Redirect to insert.php for teacher
-      $_SESSION['role']="teacher";
-      header("Location: ../profile.php"); 
+      // Set session role
+      $_SESSION['role'] = "teacher";
+
+      // Redirect to profile.php for teacher with message
+      header("Location: ../profile.php?id=" . urlencode($username));
       exit(); // Exit script
     }
   } else {
     // Failed login
-    echo "Incorret passowrd";
+    echo "Incorrect password";
   }
 } else {
   // Failed login
- echo "Incorrect username";
+  echo "Incorrect username";
 }
 
 // Close MySQL connection

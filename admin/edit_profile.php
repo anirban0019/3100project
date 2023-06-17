@@ -43,7 +43,7 @@
       <button type="submit" class="btn btn-primary">Save Changes</button>
     </form>
   </div>
-  <script src="../js/editprofile.js"></script>
+ <script src="../js/editprofile.js"></script>
   <!-- Include additional scripts as needed -->
 </body>
 </html>

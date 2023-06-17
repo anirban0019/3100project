@@ -40,5 +40,8 @@
     <form method="get" action="stu_search.php">
         <input type="submit" value="Search" name="search">
     </form>
+    <form method="get" action="test.php">
+        <input type="submit" value="test" name="test">
+    </form>
 </body>
 </html>

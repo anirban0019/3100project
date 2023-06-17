@@ -2,12 +2,7 @@
 // Start session
 session_start();
 
-// Check if user is logged in
-if (!isset($_SESSION['username'])) {
-  // Redirect to login page or display an appropriate message
-  header("Location: ../login.php");
-  exit();
-}
+
 
 // Connect to MySQL
 $conn = mysqli_connect("localhost", "root", "", "dynamic");

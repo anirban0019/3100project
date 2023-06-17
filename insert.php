@@ -7,11 +7,7 @@
 <body>
     <?php include_once "include/navbar.php" ?>
     <!--logout button-->
-<div style="position: absolute; top: 10px; right: 10px;">
-<form method="post" action="bcknd/logout.php">
-        <input type="submit" value="Logout" name="logout">
-    </form>
-</div>
+<?php include_once "include/logbutton.php"?>
 
     <form method="post">
         Student name: <input type="text" name="name" required><br>

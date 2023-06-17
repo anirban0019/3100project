@@ -14,32 +14,30 @@
 
   <body>
     <header>
+    <?php include_once "include/start_session.php" ?>
+      <?php include_once "bcknd/profile.php" ?>
       <!-- Header content -->
       <?php include_once "include/navbar.php" ?>
       <!--logout button-->
-      <div style="position: absolute; top: 10px; right: 10px">
-        <form method="post" action="bcknd/logout.php">
-          <input type="submit" value="Logout" name="logout" />
-        </form>
-      </div>
-    </header>
+      <?php include_once "include/logbutton.php"?>
+      <!--check user-->
+      <?php include_once "include/check_user.php" ?>
+      
 
+    </header>
+   
     <div class="container emp-profile">
-      <form method="post">
+     
         <div class="row">
           <div class="col-md-4">
             <div class="profile-img">
-              <img id="profile-picture" alt="sorry, no picture found" />
-              <div class="file btn btn-lg btn-primary">
-                Change Photo
-                <input type="file" name="file" />
-              </div>
+              <img src="<?php echo "$profile_picture"?>" alt="sorry, no picture found" />
             </div>
           </div>
           <div class="col-md-6">
             <div class="profile-head">
-              <h5 class="profile-name"></h5>
-              <h6 id="bio"></h6>
+              <h5 class="profile-name"><?php echo "$name"?></h5>
+              <h6 id="bio"><?php echo "$bio"?></h6>
               <br> <br> <br>
               <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
@@ -58,22 +56,23 @@
             </div>
           </div>
           <div class="col-md-2">
-            <form action="include/to_edit.php" method="post">
-            <input
-              type="submit"
-              class="profile-edit-btn"
-              id="edit-profile-btn"
-              name="btnAddMore"
-              value="Edit Profile"
-            />
-            </form>   
-          </div>
+    <?php
+    if ($editVisible) {
+        echo '
+            <form action="admin/edit_profile.php" method="post">
+                <input type="submit" class="profile-edit-btn" id="edit-profile-btn" name="btnEditProfile" value="Edit Profile" />
+            </form>
+        ';
+    }
+    ?>
+</div>
+
         </div>
         <div class="row">
           <div class="col-md-4">
             <div class="profile-work">
               <p>WORK LINK</p>
-              <a href="">Websites</a><br />
+              <a href="admin/edit_profile.php">Websites</a><br />
               <a href="">Bootsnipp Profile</a><br />
               <a href="">Bootply Profile</a>
               <p>SKILLS</p>
@@ -97,7 +96,7 @@
                     <label>User Id</label>
                   </div>
                   <div class="col-md-6">
-                    <p class="profile-username"></p>
+                    <p class="profile-username"><?php echo "$username"?></p>
                   </div>
                 </div>
                 <div class="row">
@@ -105,7 +104,7 @@
                     <label>Name</label>
                   </div>
                   <div class="col-md-6">
-                    <p class="profile-name"></p>
+                    <p class="profile-name"><?php echo "$name"?></p>
                   </div>
                 </div>
                 <div class="row">
@@ -113,7 +112,7 @@
                     <label>Email</label>
                   </div>
                   <div class="col-md-6">
-                    <p class="profile-email"></p>
+                    <p class="profile-email"><?php echo "$email"?></p>
                   </div>
                 </div>
                 <div class="row">
@@ -121,7 +120,7 @@
                     <label>Phone</label>
                   </div>
                   <div class="col-md-6">
-                    <p>123 456 7890</p>
+                    <p><?php echo "$bio"?></p>
                   </div>
                 </div>
                 <div class="row">
@@ -129,15 +128,22 @@
                     <label>Profession</label>
                   </div>
                   <div class="col-md-6">
-                    <p class="profile-role"></p>
+                    <p class="profile-role"><?php echo "$role"?></p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </form>
+      
+      <div class="col-md-2">
+    <?php
+    
+
+    ?>
+</div>
+
     </div>
-    <script src="js/profile.js"></script>
+   
   </body>
 </html>

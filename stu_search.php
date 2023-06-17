@@ -7,11 +7,9 @@
 </head>
 <body>
 <?php include_once "include/navbar.php" ?>
-<div style="position: absolute; top: 10px; right: 10px;">
-    <form method="post" action="bcknd/logout.php">
-        <input type="submit" value="Logout" name="logout">
-    </form>
-</div>
+<!--logout button-->
+<?php include_once "include/logbutton.php"?>
+
 <h2>Search for Student by Roll No.</h2>
 <form action="bcknd/search.php" method="post" target="search_result">
     <input type="text" name="search" placeholder="Enter Roll No.">
