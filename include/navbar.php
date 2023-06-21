@@ -18,7 +18,15 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="profile.php?id=<?php echo "$uname"?>">Profile</a>
+              <?php
+                  if(isset($_SESSION['username'])){
+                    $rout="profile.php?id=".$uname;
+                  } 
+                  else {
+                    $rout="login.php";
+                  }
+              ?>
+              <a class="nav-link" href="<?php echo "$rout"?>">Profile</a>
             </li>
             <li class="nav-item dropdown">
               <a
