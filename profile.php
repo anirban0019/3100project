@@ -14,9 +14,11 @@
 
   <body>
     <header>
-    <?php include_once "include/start_session.php" ?>
+      <!-- starting session -->
+     <?php include_once "include/start_session.php" ?>
+     <!-- backend for fetching data -->
       <?php include_once "bcknd/profile.php" ?>
-      <!-- Header content -->
+      <!-- navbar -->
       <?php include_once "include/navbar.php" ?>
       <!--logout button-->
       <?php include_once "include/logbutton.php"?>
