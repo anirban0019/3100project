@@ -1,3 +1,11 @@
+ <!-- starting session -->
+ <?php include_once "include/start_session.php" ?>
+     <!-- backend for fetching data -->
+<?php include_once "bcknd/profile.php" ?>
+<!--check user-->
+<?php include_once "include/check_user.php" ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,23 +17,16 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/test_profile.css" />
+    <title><?php echo "$name"?></title>
   </head>
   <!------ Include the above in your HEAD tag ---------->
 
   <body>
     <header>
-      <!-- starting session -->
-     <?php include_once "include/start_session.php" ?>
-     <!-- backend for fetching data -->
-      <?php include_once "bcknd/profile.php" ?>
       <!-- navbar -->
       <?php include_once "include/navbar.php" ?>
       <!--logout button-->
       <?php include_once "include/logbutton.php"?>
-      <!--check user-->
-      <?php include_once "include/check_user.php" ?>
-      
-
     </header>
    
     <div class="container emp-profile">

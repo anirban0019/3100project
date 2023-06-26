@@ -11,7 +11,7 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!--Custom CSS-->
     <link rel="stylesheet" href="navbar.css">
-    <title>Home</title>
+    
 </head>
 
 <body>
@@ -21,7 +21,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    <img src="./Ruet.png" width="50px" alt="">
+                    <img src="../html files/Ruet.png" width="50px" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

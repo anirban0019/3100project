@@ -21,16 +21,16 @@
     <div class="wrapper">
       <div class="form-boxlogin">
         <h2>Login</h2>
-        <form action="bcknd/login_process.php">
+        <form action="bcknd/login_process.php" method="post">
           <div class="input-box">
             <span class="icon"><ion-icon name="mail-open"></ion-icon> </span>
-            <input type="text" placeholder="Username" required />
+            <input type="text" placeholder="Username" name="username" required />
           </div>
           <div class="input-box">
             <span class="icon">
               <ion-icon name="lock-closed"></ion-icon>
             </span>
-            <input type="password" placeholder="Password" required />
+            <input type="password" placeholder="Password" name="password" required />
           </div>
           <div class="remember-forgot">
             <label><input type="checkbox" /> Remember Me </label>
@@ -46,7 +46,7 @@
       </div>
       <div class="form-boxsignin">
         <h2>Sign Up</h2>
-        <form action="bcknd/signup_process.php">
+        <form action="bcknd/signup_process.php" method="post">
           <div class="input-box">
             <span class="icon">
               <ion-icon name="person"></ion-icon>

@@ -3,6 +3,7 @@
 <head><title>Insert a record</title>
 <link rel="stylesheet" href="css/bootstrap.min.css" />
 <link rel="stylesheet" href="css/style2.css" />
+
 </head>
 <body>
 <?php include_once "include/navbar.php" ?>
