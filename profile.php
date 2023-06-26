@@ -25,8 +25,7 @@
     <header>
       <!-- navbar -->
       <?php include_once "include/navbar.php" ?>
-      <!--logout button-->
-      <?php include_once "include/logbutton.php"?>
+      
     </header>
    
     <div class="container emp-profile">

@@ -6,8 +6,7 @@
 </head>
 <body>
     <?php include_once "include/navbar.php" ?>
-    <!--logout button-->
-<?php include_once "include/logbutton.php"?>
+
 
     <form method="post">
         Student name: <input type="text" name="name" required><br>

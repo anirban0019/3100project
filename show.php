@@ -7,8 +7,7 @@
 </head>
 <body>
 <?php include_once "include/navbar.php" ?>
-<!--logout button-->
-<?php include_once "include/logbutton.php"?>
+
     <?php
         
 
