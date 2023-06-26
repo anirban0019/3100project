@@ -21,7 +21,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    <img src="../html files/Ruet.png" width="50px" alt="">
+                    <img src="./img/Ruet.png" width="50px" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

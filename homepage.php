@@ -21,7 +21,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    <img src="./Ruet.png" width="50px" alt="">
+                    <img src="./img/Ruet.png" width="50px" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -54,7 +54,7 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="carousel-backgroud">
-                        <img src="./background.jpg" alt="">
+                        <img src="./img/background.jpg" alt="">
                         <div class="carousel-container">
                             <div class="carousel-content-container">
                                 <h2>Computer Science & Engineering</h2>
@@ -73,7 +73,7 @@
                 </div>
                 <div class="carousel-item">
                     <div class="carousel-backgroud">
-                        <img src="./background.jpg" alt="">
+                        <img src="./img/background.jpg" alt="">
                         <div class="carousel-container">
                             <div class="carousel-content-container">
                                 <h2>Our Achivements</h2>
@@ -171,7 +171,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6 d-none d-lg-flex">
-                    <img src="./cse.jpg" class="img-fluid" alt="">
+                    <img src="./img/cse.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="col-md-6">
                     <div class="course-content">
@@ -198,7 +198,7 @@
                 <div class="col-lg-4">
                     <div class="teachers-box border">
                         <div class="icon">
-                            <img src="./boshir sir.jpg" height="60px" class="img-fluid" alt="">
+                            <img src="./img/boshir sir.jpg" height="60px" class="img-fluid" alt="">
                         </div>
                         <h3>Prof. Dr. Boshir Ahmed</h3>
                         <p>Boshir Ahmed is a Dhaka native and he is working as a faculty member in the department of
@@ -216,7 +216,7 @@
                     <div class="teachers-box border">
                         <h2>Head Of the Department</h2>
                         <div class="icon">
-                            <img src="./al mamun sir.jpg" height="60px" class="img-fluid" alt="">
+                            <img src="./img/al mamun sir.jpg" height="60px" class="img-fluid" alt="">
                         </div>
                         <h3>Prof. Dr. Md. Al Mamun</h3>
                         <p>My teaching interests are inseparably conjoined with my research ambitions. My research
@@ -235,7 +235,7 @@
                 <div class="col-lg-4">
                     <div class="teachers-box border">
                         <div class="icon">
-                            <img src="./Shahiduzzaman sir.jpg" height="50px" class="img-fluid" alt="">
+                            <img src="./img/Shahiduzzaman sir.jpg" height="50px" class="img-fluid" alt="">
                         </div>
                         <h3>Prof. Dr. Md. Shahid Uz Zaman</h3>
                         <p>Md. Shahid Uz Zaman received B.Sc Degree in EEE from the Department of Electrical &
