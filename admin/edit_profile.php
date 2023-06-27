@@ -11,6 +11,10 @@
 <body>
   <header>
     <!-- Header content -->
+    <!-- starting session -->
+    <?php include_once "include/start_session.php" ?>
+      <!-- navbar -->
+      <?php include_once "include/navbar.php" ?>
   </header>
   <div class="container">
     <h2>Edit Profile</h2>
@@ -43,7 +47,7 @@
       <button type="submit" class="btn btn-primary">Save Changes</button>
     </form>
   </div>
- <script src="../js/editprofile.js"></script>
+
   <!-- Include additional scripts as needed -->
 </body>
 </html>
