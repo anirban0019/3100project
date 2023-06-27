@@ -12,9 +12,9 @@
   <header>
     <!-- Header content -->
     <!-- starting session -->
-    <?php include_once "include/start_session.php" ?>
+    <?php include_once "../include/start_session.php" ?>
       <!-- navbar -->
-      <?php include_once "include/navbar.php" ?>
+      <?php include_once "../include/navbar.php" ?>
   </header>
   <div class="container">
     <h2>Edit Profile</h2>
