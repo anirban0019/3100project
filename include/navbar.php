@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!--Custom CSS-->
-    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="../css/navbar.css">
     
 </head>
 
@@ -41,6 +41,24 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Contact</a>
+                        </li>
+                        <li  class="nav-item">
+                        <?php
+                        // Check if user is logged in
+                        if (!isset($_SESSION['username'])) {
+                            echo '<div style="position: absolute; right: 10px">
+                                <form method="post" action="login.php">
+                                <input type="submit" value="Log in" name="login" />
+                                </form>
+                                </div>';
+                            }
+                        else{
+                            echo '<div style="position: absolute; right: 10px">
+                             <form method="post" action="bcknd/logout.php">
+                              <input type="submit" value="Logout" name="logout" />
+                             </form>
+                             </div>';}
+?>
                         </li>
                     </ul>
                 </div>

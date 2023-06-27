@@ -7,8 +7,6 @@
 </head>
 <body>
 <?php include_once "include/navbar.php" ?>
-<!--logout button-->
-<?php include_once "include/logbutton.php"?>
 
 <h2>Search for Student by Roll No.</h2>
 <form action="bcknd/search.php" method="post" target="search_result">
