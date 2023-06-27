@@ -29,12 +29,14 @@ if (mysqli_num_rows($user_result) == 1) {
   if (password_verify($password, $user_row['password'])) {
     // Successful login
     $_SESSION['username'] = $username; // Set session variable
+    $_SESSION['name'] =$user_row['name']; // Set session variable
 
     // Check if user is a student
     $student_sql = "SELECT * FROM students WHERE username='$username'";
     $student_result = mysqli_query($conn, $student_sql);
     if (mysqli_num_rows($student_result) == 1) {
       // Set session role
+
       $_SESSION['role'] = "student";
 
       // Redirect to profile.php for student with message

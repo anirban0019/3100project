@@ -5,7 +5,10 @@
 
 </head>
 <body>
+       <!-- starting session -->
+ <?php include_once "include/start_session.php" ?>
     <?php include_once "include/navbar.php" ?>
+ 
 
 
     <form method="post">

@@ -31,7 +31,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="./homepage.php">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">About</a>
@@ -42,6 +42,17 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Contact</a>
                         </li>
+                        <li class="nav-item">
+                         <?php
+                         if(isset($_SESSION['username'])){
+                         $rout="profile.php?id=".$uname;
+                         } 
+                         else {
+                         $rout="login.php";
+                        }
+                             ?>
+                        <a class="nav-link" href="<?php echo "$rout"?>" aria-current="page"><?php echo "$pname"?></a>
+            </li>
                         <li  class="nav-item">
                         <?php
                         // Check if user is logged in

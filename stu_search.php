@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
 </head>
 <body>
+       <!-- starting session -->
+<?php include_once "include/start_session.php" ?>
 <?php include_once "include/navbar.php" ?>
 
 <h2>Search for Student by Roll No.</h2>

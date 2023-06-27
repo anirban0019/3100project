@@ -16,6 +16,8 @@
 
 <body>
 <header>
+      <!-- starting session -->
+      <?php include_once "include/start_session.php" ?>
       <!-- navbar -->
       <?php include_once "include/navbar.php" ?>
       
