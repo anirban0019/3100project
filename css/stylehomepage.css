@@ -230,6 +230,7 @@ Teachers Section
     text-align: justify;
 }
 .teachers .teachers-box h2{
+    font-family: 'Abril Fatface', cursive;;
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
