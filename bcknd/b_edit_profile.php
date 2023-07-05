@@ -41,6 +41,8 @@ if (mysqli_num_rows($user_result) == 1) {
       $field_of_research = $student_row['field_of_research'];
       $mobile = $student_row['mobile'];
       $address = $student_row['address'];
+      $st_roll = $student_row['roll_no'];
+     
     }
   } else {
     $teacher_sql = "SELECT * FROM teachers WHERE username='$username'";
@@ -56,6 +58,7 @@ if (mysqli_num_rows($user_result) == 1) {
       $address = $teacher_row['address'];
     }
   }
+
 }
 // Close MySQL connection
 mysqli_close($conn);

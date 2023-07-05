@@ -14,8 +14,8 @@
       rel="stylesheet"
       id="bootstrap-css"
     />
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.js"></script>
     <link rel="stylesheet" href="css/test_profile.css" />
     <title><?php echo "$name"?></title>
   </head>
@@ -27,7 +27,7 @@
       <?php include_once "include/navbar.php" ?>
       
     </header>
-   
+    <?php include_once "include/alert.php" ?>
     <div class="container emp-profile">
      
         <div class="row">
