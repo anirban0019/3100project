@@ -22,9 +22,12 @@
         <div class="col-md-3 border-right">
             <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img  width="250px" src="<?php echo "$profile_picture"?>" alt="sorry, no picture found"><br>
             <span class="font-weight-bold" > 
-        <input type="file" class="form-control" id="profile-picture" name="profile-picture">
+        <input type="file" class="form-control" id="profile-picture" name="profile-picture"> </span><br>
+        <span class="font-weight-bold" >
+        <button type="submit" class="btn btn-primary" name="submit">Upload</button>
       </span></div>
         </div>
+
         <div class="col-md-5 border-right">
             <div class="p-3 py-5">
                 <div class="d-flex justify-content-between align-items-center mb-3">
@@ -46,9 +49,10 @@
         </div>
         <div class="col-md-4">
             <div class="p-3 py-5">
-                <div class="d-flex justify-content-between align-items-center experience"><span>Edit Experience</span><span class="border px-3 p-1 add-experience"><i class="fa fa-plus"></i>&nbsp;Experience</span></div><br>
-                <div class="col-md-12"><label class="labels">Experience in Designing</label><input type="text" class="form-control" placeholder="experience" value=""></div> <br>
-                <div class="col-md-12"><label class="labels">Additional Details</label><input type="text" class="form-control" placeholder="additional details" value=""></div>
+                <div class="d-flex justify-content-between align-items-center experience"><span><b>Change Password</b></span></div><br>
+                <div class="col-md-12"><label class="labels">Current password</label><input type="text" class="form-control" value=""></div> <br>
+                <div class="col-md-12"><label class="labels">New Password</label><input type="text" class="form-control" value=""></div>
+                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Set new Password</button></div>
             </div>
         </div>
     </div>

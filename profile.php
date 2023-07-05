@@ -115,6 +115,17 @@
                     <p class="profile-name"><?php echo "$name"?></p>
                   </div>
                 </div>
+                <?php if($role == "student"){
+                  echo '
+                  <div class="row">
+                  <div class="col-md-6">
+                    <label>Roll no</label>
+                  </div>';}?>
+                 
+                  <div class="col-md-6">
+                    <p class="profile-name"><?php if($role == "student")
+                     {echo "$st_roll";}?></p>
+                    </div>
                 <div class="row">
                   <div class="col-md-6">
                     <label>Email</label>
@@ -128,7 +139,14 @@
                     <label>Phone</label>
                   </div>
                   <div class="col-md-6">
-                    <p><?php echo "$bio"?></p>
+                    <p><?php echo "$mobile"?></p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                    <label>Address</label>
+                  </div>
+                  <div class="col-md-6">
+                    <p><?php echo "$address"?></p>
                   </div>
                 </div>
                 <div class="row">
