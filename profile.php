@@ -61,12 +61,18 @@
     <?php
     if ($editVisible) {
         echo '
-            <form action="admin/edit_profile.php" method="post">
-                <input type="submit" class="profile-edit-btn" id="edit-profile-btn" name="btnEditProfile" value="Edit Profile" />
-            </form>
+  
+        <input type="submit" class="profile-edit-btn" id="edit-profile-btn" name="btnEditProfile" value="Edit Profile" onclick="to_edit()"/>
+    </form>
+    
         ';
     }
     ?>
+    <script>
+    function to_edit(){
+      window.location.href = "edit_profile.php?id=<?php echo $uname ?>";
+    }
+    </script>
 </div>
 
         </div>

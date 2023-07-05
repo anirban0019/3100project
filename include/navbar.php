@@ -45,13 +45,14 @@
                         <li class="nav-item">
                          <?php
                          if(isset($_SESSION['username'])){
-                         $rout="profile.php?id=".$uname;
-                         } 
+                         $rout="profile.php?id=".$uname; ?>
+                         <a class="nav-link" href="<?php echo "$rout"?>" aria-current="page"><?php echo "$pname"?></a>
+                         <?php } 
                          else {
                          $rout="login.php";
                         }
                              ?>
-                        <a class="nav-link" href="<?php echo "$rout"?>" aria-current="page"><?php echo "$pname"?></a>
+                        
             </li>
                         <li  class="nav-item">
                         <?php

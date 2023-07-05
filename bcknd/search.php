@@ -27,6 +27,10 @@ if (isset($_POST['submit'])) {
     $result = mysqli_query($conn, $sql);
 
     mysqli_close($conn);
+    if (!isset($_SESSION['role'])) {
+        $_SESSION['role'] = "student"; {
+        }
+    }
 }
 ?>
 
