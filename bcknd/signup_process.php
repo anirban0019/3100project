@@ -32,8 +32,8 @@ if (mysqli_num_rows($result) > 0) {
         $sql2 = "INSERT INTO user (username, name, email, password, role) VALUES ('$username', '$name', '$email', '$hashed_password','$role')";
     } else {
         $department = mysqli_real_escape_string($conn, $_POST['department']);
-        $sql2 = "INSERT INTO user (username, name, email, password, role) VALUES ('$username', '$name', '$email', '$hashed_password')";
-        $sql = "INSERT INTO teachers (username, name, email, department) VALUES ('$username', '$name', '$email', '$hashed_password','$role','$department')";
+        $sql2 = "INSERT INTO user (username, name, email, password, role) VALUES ('$username', '$name', '$email', '$hashed_password','$role')";
+        $sql = "INSERT INTO teachers (username, name, email, department) VALUES ('$username', '$name', '$email', '$department')";
     }
 
     if (mysqli_query($conn, $sql)&&mysqli_query($conn, $sql2)) {
