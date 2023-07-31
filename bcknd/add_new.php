@@ -27,8 +27,6 @@ if (isset($_POST['submit'])) {
     $fileTmp = $file['tmp_name'];
     $fileEXT = explode('.', $filename);
     $fileExtension = strtolower(end($fileEXT));
-
-    echo $fileExtension;
     
     $allowedExt = array("jpg", "jpeg", "png", "gif", "pdf");
     
@@ -36,9 +34,9 @@ if (isset($_POST['submit'])) {
         if ($file['error'] === 0) {
             $fileSize = $file['size'];
             if ($fileSize < 5000000) { 
-                $newFileName = uniqid('', true) . '.' . $fileExtension;
-                $destination = "../img/notices/$newFileName";
-                $dbdestination = "img/notices/$newFileName";
+                $newFileName = $filename;
+                $destination = "../admin/data/notices/$newFileName";
+                $dbdestination = "data/notices/$newFileName";
                 move_uploaded_file($fileTmp, $destination);
             } else {
                 header("Location: ../admin/add_notice.php?message=File+size+exceeds+the+limit");
@@ -55,11 +53,10 @@ if (isset($_POST['submit'])) {
         exit();
     }
 
-    // Insert notice into database using prepared statement
-    $sql = "INSERT INTO notice (notice_title, notice_content, notice_date, notice_time, notice_file) VALUES (?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO notice (notice_title, notice_content, notice_date, notice_time, notice_file, notice_ext) VALUES (?, ?, ?, ?, ?, ?)";
     $stmt = mysqli_stmt_init($conn);
     if (mysqli_stmt_prepare($stmt, $sql)) {
-        mysqli_stmt_bind_param($stmt, "sssss", $title, $description, $date, $time, $dbdestination);
+        mysqli_stmt_bind_param($stmt, "ssssss", $title, $description, $date, $time, $dbdestination, $fileExtension);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
         header("Location: ../admin/notices.php?message=Notice+added+successfully");

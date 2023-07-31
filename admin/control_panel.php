@@ -1,3 +1,4 @@
+<?php include_once "../include/check_admin.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +11,13 @@
     
 </head>
 <body>
-    <?php include_once "../bcknd/admin_data_fetch.php"; ?>
+    <header>
+    <?php include_once "../bcknd/admin_data_fetch.php";
+    include_once "admin_nav.php"; ?>
+    </header>
 <div class="container-fluid">
-        <div class="row" >
-            <div class="col-md-3 sidebar">
+        <div class="row">
+            <div class="col-md-3 sidebar" style="margin-top: 30px;">
                 <h4>Admin Dashboard</h4>
                 <ul>
                     <li><a href="notices.php">Notices</a></li>
@@ -22,7 +26,7 @@
                     <!-- Add more sidebar items as needed -->
                 </ul>
             </div>
-            <div class="col-md-9 content">
+            <div class="col-md-9 content" style="margin-top: 15px;">
                 <div class="jumbotron">
                     <h2><center>Welcome, Admin!</center></h2>
                     <p><center>This is the admin dashboard. Choose an option from the sidebar to manage different aspects of the system.</center></p>

@@ -21,7 +21,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    <img src="./img/Ruet.png" width="50px" alt="">
+                    <img src="./img/Ruet.png" width="50px" alt="ruet.png">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -45,9 +45,15 @@
                         <li class="nav-item">
                          <?php
                          if(isset($_SESSION['username'])){
-                         $rout="profile.php?id=".$uname; ?>
-                         <a class="nav-link" href="<?php echo "$rout"?>" aria-current="page"><?php echo "$pname"?></a>
-                         <?php } 
+                            if($_SESSION['role']=="admin"){
+                                $rout="admin/control_panel.php";
+                            }
+                            else{
+                            $rout="profile.php?id=".$uname; }?>
+                            
+                            <a class="nav-link" href="<?php echo "$rout"?>" aria-current="page"><?php echo "$pname"?></a>
+                            <?php  
+                         }
                          else {
                          $rout="login.php";
                         }

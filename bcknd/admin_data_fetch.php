@@ -1,10 +1,4 @@
 <?php
-// start session
-session_start();
-if ($_SESSION['role']!= "admin") {
-  // if user is not logged in, redirect to login page
-  header('location: ../login.php');
-}
 // Connect to MySQL
 $conn = mysqli_connect("localhost", "root", "", "dynamic");
 
