@@ -9,7 +9,7 @@
 <?php include_once "include/navbar.php" ?>
 
 <h2>Search for Student by Roll No.</h2>
-<form action="bcknd/search.php" method="post" target="search_result">
+<form action="bcknd/search.php" class="Search-bar" method="post" target="search_result">
     <input type="text" name="search" placeholder="Enter Roll No.">
     <input type="submit" name="submit" value="Search">
 </form>
