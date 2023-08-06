@@ -66,14 +66,14 @@
                         if (!isset($_SESSION['username'])) {
                             echo '<div style="position: absolute; right: 10px">
                                 <form method="post" action="login.php">
-                                <input type="submit" value="Log in" name="login" />
+                                <input class="btn btn-primary" type="submit" value="Log in" name="login" />
                                 </form>
                                 </div>';
                             }
                         else{
                             echo '<div style="position: absolute; right: 10px">
                              <form method="post" action="bcknd/logout.php">
-                              <input type="submit" value="Logout" name="logout" />
+                              <input class="btn btn-primary" type="submit" value="Logout" name="logout" />
                              </form>
                              </div>';}
 ?>

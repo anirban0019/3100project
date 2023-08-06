@@ -14,7 +14,7 @@
 <body >
     <header>
         <?php 
-        include_once "admin_nav.php";
+       // include_once "admin_nav.php";
         include_once "../include/error.php";
         include_once "../include/alert.php" ?>
     </header>

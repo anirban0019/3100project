@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Student Search</title>
+    <link rel="stylesheet" type="text/css" href="css/Searchbar.CSS">   
     <link rel="stylesheet" type="text/css" href="css/style2.css">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
 </head>
