@@ -36,15 +36,16 @@
     </div>
     <div class="form-group">
         <label for="notice_date">Notice Date</label>
-        <input type="date" class="form-control" id="notice_date" name="notice_date" value="$notice_date">
+        <input type="date" class="form-control" id="notice_date" name="notice_date" value="<?php echo $notice_date; ?>">
     </div>
     <div class="form-group">
         <label for="notice_time">Notice Time</label>
-        <input type="time" class="form-control" id="notice_time" name="notice_time" value="$notice_time">
+        <input type="time" class="form-control" id="notice_time" name="notice_time" value="<?php echo $notice_time; ?>">
     </div>
     <div class="form-group">
         <label for="notice_file">Notice Image or pdf</label><br>
         <a href="<?php echo "$notice_file"; ?>" >View exisiting file</a>
+        
         
         <input type="file" class="form-control" id="notice_file" name="notice_file">
     </div>
