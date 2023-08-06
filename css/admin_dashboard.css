@@ -1,0 +1,42 @@
+/* Custom styles for the admin dashboard */
+.sidebar {
+  background: #cfdff0;
+  padding: 20px;
+  padding-right: 0%;
+  border-radius: 5px;
+  margin-top: 43px;
+  width: auto; /* Set the width of the sidebar */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar li {
+  margin-bottom: 10px;
+}
+.content {
+  margin-top: 20px;
+  padding: 20px;
+}
+.jumbotron {
+  background-color: #f8f9fa;
+  padding: 2rem 1rem;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+.card-blue {
+  background-color: #3498db;
+}
+.card-green {
+  background-color: #2ecc71;
+}
+.card-yellow {
+  background-color: #f1c40f;
+}
+.card-red {
+  background-color: #e74c3c;
+}

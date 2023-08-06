@@ -28,11 +28,12 @@ if (mysqli_num_rows($result) > 0) {
     if ($role == 'student') {
         $roll_no = mysqli_real_escape_string($conn, $_POST['roll_no']);
         $department = mysqli_real_escape_string($conn, $_POST['department']);
-        $sql = "INSERT INTO students (username, name, email, password, roll_no, department) VALUES ('$username', '$name', '$email', '$hashed_password', '$roll_no', '$department')";
+        $sql = "INSERT INTO students (username, name, email,  roll_no, department) VALUES ('$username', '$name', '$email', '$roll_no', '$department')";
         $sql2 = "INSERT INTO user (username, name, email, password, role) VALUES ('$username', '$name', '$email', '$hashed_password','$role')";
     } else {
-        $sql2 = "INSERT INTO user (username, name, email, password) VALUES ('$username', '$name', '$email', '$hashed_password')";
-        $sql = "INSERT INTO teachers (username, name, email, password, role) VALUES ('$username', '$name', '$email', '$hashed_password','$role')";
+        $department = mysqli_real_escape_string($conn, $_POST['department']);
+        $sql2 = "INSERT INTO user (username, name, email, password, role) VALUES ('$username', '$name', '$email', '$hashed_password','$role')";
+        $sql = "INSERT INTO teachers (username, name, email, department) VALUES ('$username', '$name', '$email', '$department')";
     }
 
     if (mysqli_query($conn, $sql)&&mysqli_query($conn, $sql2)) {

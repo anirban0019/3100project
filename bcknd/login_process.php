@@ -29,22 +29,16 @@ if (mysqli_num_rows($user_result) == 1) {
   if (password_verify($password, $user_row['password'])) {
     // Successful login
     $_SESSION['username'] = $username; // Set session variable
+    $_SESSION['name'] =$user_row['name']; // Set session variable
+    $_SESSION['role'] = $user_row['role']; // Set session variable
 
-    // Check if user is a student
-    $student_sql = "SELECT * FROM students WHERE username='$username'";
-    $student_result = mysqli_query($conn, $student_sql);
-    if (mysqli_num_rows($student_result) == 1) {
-      // Set session role
-      $_SESSION['role'] = "student";
-
-      // Redirect to profile.php for student with message
-      header("Location: ../profile.php?id=" . urlencode($username));
+    if ($user_row['role'] == 'admin') {
+      // Redirect to admin.php for admin with message
+      header("Location: ../admin/control_panel.php");
       exit(); // Exit script
-    } else {
-      // Set session role
-      $_SESSION['role'] = "teacher";
-
-      // Redirect to profile.php for teacher with message
+    }
+    else{
+      // Redirect to profile.php for user with message
       header("Location: ../profile.php?id=" . urlencode($username));
       exit(); // Exit script
     }

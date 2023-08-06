@@ -39,6 +39,9 @@ if (mysqli_num_rows($user_result) == 1) {
       $profile_picture = $student_row['profile_picture'];
       $bio = $student_row['bio'];
       $field_of_research = $student_row['field_of_research'];
+      $mobile = $student_row['mobile'];
+      $address = $student_row['address'];
+      $st_roll = $student_row['roll_no'];
     }
   } else {
     $teacher_sql = "SELECT * FROM teachers WHERE username='$username'";
@@ -50,6 +53,8 @@ if (mysqli_num_rows($user_result) == 1) {
       $bio = $teacher_row['bio'];
       $field_of_research = $teacher_row['field_of_research'];
       $role = "teacher";
+      $mobile = $teacher_row['mobile'];
+      $address = $teacher_row['address'];
     }
   }
 }

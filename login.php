@@ -51,25 +51,25 @@
             <span class="icon">
               <ion-icon name="person"></ion-icon>
             </span>
-            <input type="text" placeholder="Username" required />
+            <input type="text" placeholder="Username" name="username" required />
           </div>
           <div class="input-box">
             <span class="icon">
               <ion-icon name="person"></ion-icon>
             </span>
-            <input type="text" placeholder="Name" required />
+            <input type="text" placeholder="Name" name="name" required />
           </div>
           <div class="input-box">
             <span class="icon">
               <ion-icon name="mail-open"></ion-icon>
             </span>
-            <input type="email" placeholder="Email" required />
+            <input type="email" placeholder="Email" name="email" required />
           </div>
           <div class="input-box">
             <span class="icon">
               <ion-icon name="lock-closed"></ion-icon>
             </span>
-            <input type="password" placeholder="Password" required />
+            <input type="password" placeholder="Password" name="password" required />
           </div>
           <div class="form-group">
             <select class="form-control" id="status" name="status" required>

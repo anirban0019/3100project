@@ -14,8 +14,8 @@
       rel="stylesheet"
       id="bootstrap-css"
     />
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.js"></script>
     <link rel="stylesheet" href="css/test_profile.css" />
     <title><?php echo "$name"?></title>
   </head>
@@ -27,7 +27,7 @@
       <?php include_once "include/navbar.php" ?>
       
     </header>
-   
+    <?php include_once "include/alert.php" ?>
     <div class="container emp-profile">
      
         <div class="row">
@@ -61,12 +61,18 @@
     <?php
     if ($editVisible) {
         echo '
-            <form action="admin/edit_profile.php" method="post">
-                <input type="submit" class="profile-edit-btn" id="edit-profile-btn" name="btnEditProfile" value="Edit Profile" />
-            </form>
+  
+        <input type="submit" class="profile-edit-btn" id="edit-profile-btn" name="btnEditProfile" value="Edit Profile" onclick="to_edit()"/>
+    </form>
+    
         ';
     }
     ?>
+    <script>
+    function to_edit(){
+      window.location.href = "edit_profile.php?id=<?php echo $uname ?>";
+    }
+    </script>
 </div>
 
         </div>
@@ -109,6 +115,17 @@
                     <p class="profile-name"><?php echo "$name"?></p>
                   </div>
                 </div>
+                <?php if($role == "student"){
+                  echo '
+                  <div class="row">
+                  <div class="col-md-6">
+                    <label>Roll no</label>
+                  </div>';}?>
+                 
+                  <div class="col-md-6">
+                    <p class="profile-name"><?php if($role == "student")
+                     {echo "$st_roll";}?></p>
+                    </div>
                 <div class="row">
                   <div class="col-md-6">
                     <label>Email</label>
@@ -122,7 +139,14 @@
                     <label>Phone</label>
                   </div>
                   <div class="col-md-6">
-                    <p><?php echo "$bio"?></p>
+                    <p><?php echo "$mobile"?></p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                    <label>Address</label>
+                  </div>
+                  <div class="col-md-6">
+                    <p><?php echo "$address"?></p>
                   </div>
                 </div>
                 <div class="row">
