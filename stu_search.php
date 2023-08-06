@@ -11,7 +11,7 @@
     <?php include_once "include/navbar.php" ?>
 
     <h2>Search</h2>
-    <form method="post">
+    <form method="post" class="Search-bar">
         <input type="radio" name="search_type" value="students" checked> Search Students
         <br>
         <input type="radio" name="search_type" value="teachers"> Search Teachers
