@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!--Custom CSS-->
-    <link rel="stylesheet" href="../css/navbar.css">
+    <!-- <link rel="stylesheet" href="../css/navbar.css"> -->
     
 </head>
 
@@ -25,7 +25,7 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="position:fixed; float:right; right:50px;margin-right: 20px;">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="position:fixed; float:right; right:50px;margin-right: 50px;">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="../homepage.php">Home</a>
@@ -62,15 +62,15 @@
                         // Check if user is logged in
                         if (!isset($_SESSION['username'])) {
                             echo '<div class= "login" style="position: fixed; right: 10px; margin-left: 20px;">
-                                <form method="post" action="login.php">
-                                <input type="submit" value="Log in" name="login" />
+                                <form method="post" action="../login.php">
+                                <input type="submit"class="btn btn-primary" value="Log in" name="login" />
                                 </form>
                                 </div>';
                             }
                         else{
                             echo '<div class="login" style="position: fixed; right: 10px; margin-left: 20px;">
-                             <form method="post" action="bcknd/logout.php">
-                              <input type="submit" value="Logout" name="logout" />
+                             <form method="post" action="../bcknd/logout.php">
+                              <input type="submit" class="btn btn-primary" value="Logout" name="logout" />
                              </form>
                              </div>';}
 ?>

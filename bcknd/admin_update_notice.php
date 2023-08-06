@@ -2,6 +2,7 @@
 // Start session
 session_start();
 
+
 // Connect to MySQL
 $conn = mysqli_connect("localhost", "root", "", "dynamic");
 
@@ -10,17 +11,29 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
+
 if (isset($_POST['submit'])) {
     $title = mysqli_real_escape_string($conn, $_POST['notice_title']);
     $description = mysqli_real_escape_string($conn, $_POST['notice_content']);
     $date = mysqli_real_escape_string($conn, $_POST['notice_date']);
     $time = mysqli_real_escape_string($conn, $_POST['notice_time']);
-
+    $notice_id = mysqli_real_escape_string($conn, $_POST['notice_id']);
+    $notice_ext = mysqli_real_escape_string($conn, $_POST['notice_ext']);
+    $notice_des = mysqli_real_escape_string($conn, $_POST['notice_des']);
+    
     // Check if notice image is uploaded
-    if (empty($_FILES['notice_file']['name'])) {
-        header("Location: ../admin/add_notice.php?message=Please+upload+an+image+or+pdf");
-        exit();
-    }
+     if (empty($_FILES['notice_file']['name'])) {
+         if($notice_ext)
+         {
+             $dbdestination = "$notice_des";
+         }
+         else
+         {
+             $err= "Please upload a file";
+                header("Location: ../admin/edit_notice.php?error=$err");
+         }
+        } 
+        else {
 
     $file = $_FILES['notice_file'];
     $filename = $file['name'];
@@ -52,19 +65,17 @@ if (isset($_POST['submit'])) {
         header("Location: ../admin/add_notice.php?message=$msg");
         exit();
     }
+}
 
-    $sql = "INSERT INTO notice (notice_title, notice_content, notice_date, notice_time, notice_file, notice_ext) VALUES (?, ?, ?, ?, ?, ?)";
-    $stmt = mysqli_stmt_init($conn);
-    if (mysqli_stmt_prepare($stmt, $sql)) {
-        mysqli_stmt_bind_param($stmt, "ssssss", $title, $description, $date, $time, $dbdestination, $fileExtension);
-        mysqli_stmt_execute($stmt);
-        mysqli_stmt_close($stmt);
-        header("Location: ../admin/notices.php?message=Notice+added+successfully");
-        exit();
-    } else {
-        header("Location: ../admin/notices.php?error=Error+adding+notice");
-        exit();
-    }
+$sql = "UPDATE notice SET notice_title='$title', notice_content='$description', notice_date='$date', notice_time='$time', notice_file='$dbdestination', notice_ext='$fileExtension' WHERE notice_id='$notice_id'";
+$result = mysqli_query($conn, $sql);
+    if ($result) {
+    header("Location: ../admin/notices.php?message=Notice+updated+successfully");
+    exit();
+} else {
+    header("Location: ../admin/notices.php?error=Error+updating+notice");
+    exit();
+}
 }
 
 // Close MySQL connection

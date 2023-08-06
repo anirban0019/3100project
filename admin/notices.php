@@ -14,13 +14,13 @@
 <body >
     <header>
         <?php 
-       // include_once "admin_nav.php";
+        include_once "admin_nav.php";
         include_once "../include/error.php";
         include_once "../include/alert.php" ?>
     </header>
     <div class="container" >
         <div class="row" >
-            <div class="col-md-12"style="margin-top: 100px;">
+            <div class="col-md-12"style="margin-top: 40px;">
                 <h1>All notices</h1>
                 <hr>
             </div>

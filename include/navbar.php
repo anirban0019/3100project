@@ -20,7 +20,7 @@
 
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="./homepage.php">
                     <img src="./img/Ruet.png" width="50px" alt="ruet.png">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -40,7 +40,7 @@
                             <a class="nav-link active" aria-current="page" href="#">Notice</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Contact</a>
+                            <a class="nav-link active" aria-current="page" href="./stu_search.php">Search</a>
                         </li>
                         <li class="nav-item">
                          <?php

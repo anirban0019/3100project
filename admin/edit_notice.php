@@ -1,4 +1,5 @@
-<?php include_once "../include/check_admin.php" ?>
+<?php include_once "../include/check_admin.php";
+ $notice_id = $_GET['notice_id']; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +17,10 @@
 <header>
    <?php include_once "../include/alert.php";
    include_once "../include/error.php";
-   include_once "../bcknd/notice_data_fetch.php"; ?>
+   include_once "../bcknd/notice_data_fetch.php"; 
+   include_once "admin_nav.php";
+  
+   ?>
 </header>
 <div class="container">
 <div class="row">
@@ -43,17 +47,18 @@
         <input type="time" class="form-control" id="notice_time" name="notice_time" value="<?php echo $notice_time; ?>">
     </div>
     <div class="form-group">
-        <label for="notice_file">Notice Image or pdf</label><br>
-        <a href="<?php echo "$notice_file"; ?>" >View exisiting file</a>
-        <embed src="<?php echo "$notice_file"; ?>" width="200" height="200" type="application/pdf">
-        <object data="<?php echo $notice_file; ?>" type="application/pdf" width="500" height="375">
+        <label for="notice_file">Notice Image or pdf</label><br>     
+        <object data="<?php echo $notice_des; ?>" type="application/pdf" width="500" height="375">
     <p>PDF cannot be displayed. <a href="<?php echo $notice_file; ?>">Download PDF</a></p>
 </object>
-
-        
+<br>
+<a href="<?php echo "$notice_des"; ?>" >View exisiting file</a>
         <input type="file" class="form-control" id="notice_file" name="notice_file">
     </div>
     <input type="submit" class="btn btn-primary" value="Submit" name="submit">
+    <input type="hidden" name="notice_id" value="<?php echo $notice_id; ?>">
+    <input type="hidden" name="notice_des" value="<?php echo $notice_des; ?>">
+    <input type="hidden" name="notice_ext" value="<?php echo $notice_ext; ?>">
 </form>
 </div> 
 </body>

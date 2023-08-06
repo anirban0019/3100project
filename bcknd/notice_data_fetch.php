@@ -1,5 +1,5 @@
 <?php
-$notice_id = $_GET['notice_id'];
+
 include_once "../include/db_connect.php";
 
 $sql = "SELECT * FROM notice Where notice_id= $notice_id;";
@@ -12,7 +12,8 @@ if($notice_result)
     $notice_content = $row['notice_content'];
     $notice_date = $row['notice_date'];
     $notice_time = $row['notice_time'];
-    $notice_file = $row['notice_file'];
+    $notice_des = $row['notice_file'];
+    $notice_ext = $row['notice_ext'];
 }
 else
 {

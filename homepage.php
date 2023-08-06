@@ -188,7 +188,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="teachers-box border">
-                        <h2>Head Of the Department</h2>
+                        <!-- <h2>Head Of the Department</h2> -->
                         <div class="icon">
                             <img src="./img/al mamun sir.jpg" height="60px" class="img-fluid" alt="">
                         </div>

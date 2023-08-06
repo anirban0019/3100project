@@ -12,11 +12,12 @@
 <body>
 <header>
    <?php include_once "../include/alert.php";
-   include_once "../include/error.php" ?>
+   include_once "../include/error.php"; 
+   include_once "admin_nav.php"; ?>
 </header>
 <div class="container">
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12" style="margin-top: 50px;">
         <h1>Add new notice</h1>
         <hr>
     </div>
