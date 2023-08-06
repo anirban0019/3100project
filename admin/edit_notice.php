@@ -25,7 +25,7 @@
         <hr>
     </div>
 </div>
-<form method="post" action="../bcknd/add_new.php" enctype="multipart/form-data">
+<form method="post" action="../bcknd/admin_update_notice.php" enctype="multipart/form-data">
     <div class="form-group">
         <label for="notice_title">Notice Title</label>
         <input type="text" class="form-control" id="notice_title" name="notice_title" value="<?php echo "$notice_name"; ?>">
@@ -45,7 +45,11 @@
     <div class="form-group">
         <label for="notice_file">Notice Image or pdf</label><br>
         <a href="<?php echo "$notice_file"; ?>" >View exisiting file</a>
-        
+        <embed src="<?php echo "$notice_file"; ?>" width="200" height="200" type="application/pdf">
+        <object data="<?php echo $notice_file; ?>" type="application/pdf" width="500" height="375">
+    <p>PDF cannot be displayed. <a href="<?php echo $notice_file; ?>">Download PDF</a></p>
+</object>
+
         
         <input type="file" class="form-control" id="notice_file" name="notice_file">
     </div>
