@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
 </head>
 <body>
+    <header>
      <!-- Starting session -->
     <?php include_once "include/start_session.php" ?>
-    <?php include_once "include/navbar.php" ?> 
+    <?php include_once "include/navbar.php" ?>
+    </header> 
 <div class="container">
     <h2>Search</h2>
     <form method="post" class="Search-bar">
@@ -24,12 +26,7 @@
 
     <?php include_once "./bcknd/search.php" ?>
 
-    <form method="get" action="show.php">
-        <input type="submit" value="Show" name="show">
-    </form>
-    <form method="get" action="insert.php">
-        <input type="submit" value="Insert" name="insert">
-    </form>
+
 </div>
 </body>
 </html>

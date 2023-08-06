@@ -99,64 +99,41 @@
                 role="tabpanel"
                 aria-labelledby="home-tab"
               >
-                <div class="row">
-                  <div class="col-md-6">
-                    <label>User Id</label>
-                  </div>
-                  <div class="col-md-6">
-                    <p class="profile-username"><?php echo "$username"?></p>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <label>Name</label>
-                  </div>
-                  <div class="col-md-6">
-                    <p class="profile-name"><?php echo "$name"?></p>
-                  </div>
-                </div>
-                <?php if($role == "student"){
-                  echo '
-                  <div class="row">
-                  <div class="col-md-6">
-                    <label>Roll no</label>
-                  </div>';}?>
-                 
-                  <div class="col-md-6">
-                    <p class="profile-name"><?php if($role == "student")
-                     {echo "$st_roll";}?></p>
-                    </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <label>Email</label>
-                  </div>
-                  <div class="col-md-6">
-                    <p class="profile-email"><?php echo "$email"?></p>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <label>Phone</label>
-                  </div>
-                  <div class="col-md-6">
-                    <p><?php echo "$mobile"?></p>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                    <label>Address</label>
-                  </div>
-                  <div class="col-md-6">
-                    <p><?php echo "$address"?></p>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <label>Profession</label>
-                  </div>
-                  <div class="col-md-6">
-                    <p class="profile-role"><?php echo "$role"?></p>
-                  </div>
-                </div>
+              <table class="table">
+    <tbody>
+        <tr>
+            <td><strong>User Id</strong></td>
+            <td><?php echo "$username"?></td>
+        </tr>
+        <tr>
+            <td><strong>Name</strong></td>
+            <td><?php echo "$name"?></td>
+        </tr>
+        <?php if ($role == "student"): ?>
+        <tr>
+            <td><strong>Roll no</strong></td>
+            <td><?php echo "$st_roll"; ?></td>
+        </tr>
+        <?php endif; ?>
+        <tr>
+            <td><strong>Email</strong></td>
+            <td><?php echo "$email"?></td>
+        </tr>
+        <tr>
+            <td><strong>Phone</strong></td>
+            <td><?php echo "$mobile"?></td>
+        </tr>
+        <tr>
+            <td><strong>Address</strong></td>
+            <td><?php echo "$address"?></td>
+        </tr>
+        <tr>
+            <td><strong>Profession</strong></td>
+            <td><?php echo "$role"?></td>
+        </tr>
+    </tbody>
+</table>
+
               </div>
             </div>
           </div>

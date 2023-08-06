@@ -47,7 +47,7 @@
                                 <div>
                                     <h1 class="fw-bold"><?php echo "$teacher_number" ?></h1>
                                     <p class="mb-0">
-                                        <span class="text-dark me-2">2</span> Completed
+                                        
                                     </p>
                                 </div>
                             </div>
@@ -67,7 +67,7 @@
                                 <div>
                                     <h1 class="fw-bold"><?php echo "$student_number" ?></h1>
                                     <p class="mb-0">
-                                        <span class="text-dark me-2">28</span> Completed
+                                        <!-- <span class="text-dark me-2">28</span> Completed -->
                                     </p>
                                 </div>
                             </div>
@@ -87,7 +87,7 @@
                                 <div>
                                     <h1 class="fw-bold"><?php echo "$class_number" ?></h1>
                                     <p class="mb-0">
-                                        <span class="text-dark me-2">1</span> Completed
+                                        <!-- <span class="text-dark me-2">1</span> Completed -->
                                     </p>
                                 </div>
                             </div>
@@ -107,7 +107,7 @@
                                 <div>
                                     <h1 class="fw-bold">76%</h1>
                                     <p class="mb-0">
-                                        <span class="text-dark me-2">5%</span> Completed
+                                        <!-- <span class="text-dark me-2">5%</span> Completed -->
                                     </p>
                                 </div>
                             </div>
