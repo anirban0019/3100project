@@ -24,12 +24,7 @@ header {
   align-items: center;
   z-index: 99;
 }
-.logo {
-  font-size: 1em;
-  color: black;
-  user-select: none;
-  background: url("Ruet.png");
-}
+
 .navigation a {
   position: relative;
   font-size: 1em;

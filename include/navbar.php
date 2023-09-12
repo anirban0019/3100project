@@ -60,7 +60,7 @@
                              ?>
                         
             </li>
-                        <li  class="nav-item">
+            <li  class="nav-item">
                         <?php
                         // Check if user is logged in
                         if (!isset($_SESSION['username'])) {
@@ -77,7 +77,7 @@
                              </form>
                              </div>';}
 ?>
-                        </li>
+                        </li> 
                     </ul>
                 </div>
             </div>
